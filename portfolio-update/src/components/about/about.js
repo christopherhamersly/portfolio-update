@@ -1,15 +1,17 @@
+
+/////////////  DEPENDENCIES BEGIN /////////////
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-// import { Image } from "@chakra-ui/core";
 import ImageContentHover from 'react-image-hover';
-// import HoverImage from "react-hover-image";
-// import InfoIcon from '@material-ui/icons/Info';
 import Media from 'react-media';
+/////////////  DEPENDENCIES END /////////////
 
-
+/////////////  STYLING BEGINS /////////////
 
 const useStyles = makeStyles((theme) => ({
+
+  /////////////// SMALL SCREEN BEGIN /////////////
   bodySmall: {
     backgroundColor: '#95f777',
     padding: theme.spacing(6),
@@ -49,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 50,
     marginBottom: 15
   },
+   /////////////// MEDIUM SCREEN BEGIN /////////////
    bodyMedium: {
     backgroundColor: '#95f777',
     padding: theme.spacing(6),
@@ -88,6 +91,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 50,
     marginBottom: 15
   },
+   /////////////// LARGE SCREEN BEGIN /////////////
    bodyLarge: {
     backgroundColor: '#95f777',
     padding: theme.spacing(6),
@@ -128,8 +132,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 15
   },
 }));
-
-
+/////////////  STYLING ENDS /////////////
 
 function About() {
   const classes = useStyles();
@@ -144,7 +147,7 @@ function About() {
             <React.Fragment>
               {matches.small && 
               <div>
-     {/* <ImageContentHover 
+     <ImageContentHover 
           className={classes.imageSmall}
           tileWidth="460px"
           tileHeight="460px" 
@@ -155,7 +158,7 @@ function About() {
             body: '',
           }} 
           
-          effect="fadeIn" /> */}
+          effect="fadeIn" />
      
       <Typography variant='h3' className = {classes.iAmSmall}> I am....</Typography>
       <Typography variant='h5' className = {classes.iAmAnswerSmall}>  a Software developer based in Seattle, Washington</Typography>

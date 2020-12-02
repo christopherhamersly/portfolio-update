@@ -1,36 +1,27 @@
 
-// import clsx from 'clsx';
-// import Card from '@material-ui/core/Card';
-// import CardHeader from '@material-ui/core/CardHeader';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import CardContent from '@material-ui/core/CardContent';
-// import CardActions from '@material-ui/core/CardActions';
-// import Collapse from '@material-ui/core/Collapse';
-// import Avatar from '@material-ui/core/Avatar';
-// import IconButton from '@material-ui/core/IconButton';
-// import Typography from '@material-ui/core/Typography';
-// import { red } from '@material-ui/core/colors';
-// import FavoriteIcon from '@material-ui/icons/Favorite';
-// import ShareIcon from '@material-ui/icons/Share';
-// import MoreVertIcon from '@material-ui/icons/MoreVert';
-// import {Bike} from 'grommet-icons'
+/////////////  DEPENDENCIES BEGIN /////////////
 
 import { React } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { makeStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCat, faMountain, faBug, faMapMarkerAlt, faBiking } from '@fortawesome/free-solid-svg-icons'
-import Media from 'react-media';
+import Media from 'react-media'
 
-// import Media from 'react-media';
+/////////////  DEPENDENCIES END /////////////
 
 
+
+
+/////////////  STYLING BEGIN /////////////
 
 const useStyles = makeStyles((theme) => ({
+
+  /////////////// LARGE SCREEN BEGIN /////////////
   portfolioLarge: {
     backgroundColor: '#77d3f7',
     padding: theme.spacing(6),
@@ -56,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar2Large: {
     marginLeft: 30,
@@ -64,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar3Large: {
     marginLeft: 30,
@@ -72,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar4Large: {
     marginLeft: 30,
@@ -80,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar5Large: {
     marginLeft: 30,
@@ -88,7 +75,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   linkLarge: {
     marginRight: 30,
@@ -96,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     paddingTop: 30
   },
+  /////////////// MEDIUM SCREEN BEGIN /////////////
   portfolioMedium: {
     backgroundColor: '#77d3f7',
     padding: theme.spacing(6),
@@ -121,7 +108,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar2Medium: {
     marginLeft: 30,
@@ -129,7 +115,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar3Medium: {
     marginLeft: 30,
@@ -137,7 +122,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar4Medium: {
     marginLeft: 30,
@@ -145,7 +129,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar5Medium: {
     marginLeft: 30,
@@ -153,7 +136,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   linkMedium: {
     marginRight: 30,
@@ -161,6 +143,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     paddingTop: 30
   },
+  /////////////// SMALL SCREEN BEGIN /////////////
   portfolioSmall: {
     backgroundColor: '#77d3f7',
     padding: theme.spacing(3),
@@ -186,7 +169,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar2Small: {
     marginLeft: 30,
@@ -194,7 +176,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar3Small: {
     marginLeft: 30,
@@ -202,7 +183,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar4Small: {
     marginLeft: 30,
@@ -210,7 +190,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   avatar5Small: {
     marginLeft: 30,
@@ -218,7 +197,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#46ddeb',
     fontSize: 40,
     marginTop: 30
-    // backgroundColor: '#46ddeb'
   },
   linkSmall: {
     marginRight: 30,
@@ -226,9 +204,9 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     paddingTop: 30
   }
-
-
 }));
+
+/////////////  STYLING ENDS /////////////
 
 function Portfolio() {
   const classes = useStyles();
@@ -747,16 +725,4 @@ function Portfolio() {
 }
 
 export default Portfolio
-{/* <Media queries={{
-  small: "(max-width: 599px)",
-  medium: "(min-width: 600px) and (max-width: 1199px)",
-  large: "(min-width: 1200px)"
-}}>
-  {matches => (
-    <React.Fragment>
-      {matches.large && 
 
-}
-</React.Fragment>
-)}
-</Media> */}

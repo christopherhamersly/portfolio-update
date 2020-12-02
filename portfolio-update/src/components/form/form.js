@@ -1,16 +1,21 @@
+
+/////////////  DEPENDENCIES BEGIN /////////////
 import React from 'react';
-import emailjs from 'emailjs-com';
 import { makeStyles } from '@material-ui/core/styles';
+import emailjs from 'emailjs-com';
 import Media from 'react-media';
-require('dotenv').config();
+/////////////  DEPENDENCIES END  /////////////
+
+
+/////////////  STYLING BEGINS /////////////
 
 const useStyles = makeStyles((theme) => ({
   
+
   contactForm: {
-    // backgroundColor: '#28464B',
     padding: theme.spacing(6),
-    // textAlign: "center"
   },
+  /////////////// LARGE SCREEN BEGIN /////////////
   textLarge: {
     fontSize: 20,
     fontFamily: 'helvetica',
@@ -23,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 30,
     marginLeft: 100,
     marginBottom: 300,
-    // textAlign: 'center'
   },
   contactNameInputLarge: {
     width: 700,
@@ -33,8 +37,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-
-    // padding: theme.spacing(6),
   },
   contactEmailInputLarge: {
     width: 700,
@@ -44,7 +46,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   contactSubjectInputLarge: {
     width: 700,
@@ -54,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   contactMessageInputLarge: {
     width: 700,
@@ -64,7 +64,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   sendButtonLarge: {
     width: 725,
@@ -75,6 +74,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     fontFamily: 'helvetica'
   },
+  /////////////// MEDIUM SCREEN BEGIN /////////////
    textMedium: {
     fontSize: 5,
     fontFamily: 'helvetica',
@@ -87,7 +87,6 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 30,
     marginLeft: 100,
     marginBottom: 300,
-    // textAlign: 'center'
   },
   contactNameInputMedium: {
     width: 700,
@@ -97,8 +96,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-
-    // padding: theme.spacing(6),
   },
   contactEmailInputMedium: {
     width: 700,
@@ -108,7 +105,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   contactSubjectInputMedium: {
     width: 700,
@@ -118,7 +114,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   contactMessageInputMedium: {
     width: 700,
@@ -128,7 +123,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   sendButtonMedium: {
     width: 725,
@@ -139,6 +133,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     fontFamily: 'helvetica'
   },
+  /////////////// SMALL SCREEN BEGIN /////////////
   textSmall: {
     fontSize: 20,
     fontFamily: 'helvetica',
@@ -152,7 +147,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 100,
     marginBottom: 300,
     marginTop: 30
-    // textAlign: 'center'
   },
   contactNameInputSmall: {
     width: 200,
@@ -163,8 +157,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-
-    // padding: theme.spacing(6),
   },
   contactEmailInputSmall: {
     width: 200,
@@ -206,23 +198,21 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'helvetica'
   },
 }));
-// const SERVICE_ID = process.env.SERVICE_ID;
-// const TEMPLATE_ID = process.env.TEMPLATE_ID;
-// const USER_ID = process.env.USER_ID
+/////////////  STYLING ENDS /////////////
+
 function Form() {
 
   const classes = useStyles();
 
   function sendEmail(e) {
-    e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
+    e.preventDefault();    
 
     emailjs.sendForm('service_jnyi882', 'template_khd6yu5', e.target, 'user_KW0vB700RZZeBNNRTVwcA')
-      // console.log('event target', e.target)
       .then((result) => {
-        window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+        window.location.reload()  
       }, (error) => {
         console.log(error.text);
-        // console.log('in the email form')
+       
       });
   }
 
@@ -296,6 +286,4 @@ function Form() {
 
 export default Form
 
-
-{/* <ReactContactForm titlePlaceholder="your name" contentsPlaceholder="What would you like to talk about?" buttonText="send" to="christopherhamersly@gmail.com" /> */ }
 

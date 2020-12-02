@@ -1,11 +1,16 @@
-import { React } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Link } from '@material-ui/core';
-import Media from 'react-media';
-// import './footer.css'
 
-// var Copyright = require('react-copyright');
+/////////////  DEPENDENCIES BEGIN /////////////
+import { React } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Typography, Link } from '@material-ui/core'
+import Media from 'react-media'
+/////////////  DEPENDENCIES END /////////////
+
+/////////////  STYLING BEGINS /////////////
+
 const useStyles = makeStyles((theme) => ({
+
+  /////////////// LARGE SCREEN BEGIN /////////////
   footerLarge: {
     backgroundColor: '#eee',
     padding: theme.spacing(6)
@@ -20,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   copyrightLarge: {
     marginTop: 10
   },
+  /////////////// MEDIUM SCREEN BEGIN /////////////
   footerMedium: {
     backgroundColor: '#eee',
     padding: theme.spacing(6)
@@ -34,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   copyrightMedium: {
     marginTop: 10
   },
+  /////////////// SMALL SCREEN BEGIN /////////////
   footerSmall: {
     backgroundColor: '#eee',
     padding: theme.spacing(6)
@@ -48,7 +55,8 @@ const useStyles = makeStyles((theme) => ({
   copyrightSmall: {
     marginTop: 10
   }
-}));
+}))
+/////////////  STYLING ENDS /////////////
 
 function Footer() {
   const classes = useStyles();
@@ -195,16 +203,4 @@ function Footer() {
 
 export default Footer
 
-{/* <Media queries={{
-          small: "(max-width: 599px)",
-          medium: "(min-width: 600px) and (max-width: 1199px)",
-          large: "(min-width: 1200px)"
-        }}>
-          {matches => (
-            <React.Fragment>
-              {matches.large && 
 
-}
-</React.Fragment>
-)}
-</Media> */}

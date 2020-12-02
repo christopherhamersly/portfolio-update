@@ -1,3 +1,5 @@
+
+/////////////  DEPENDENCIES BEGIN /////////////   
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
@@ -11,32 +13,36 @@ import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import { grey } from '@material-ui/core/colors'
-// import FavoriteIcon from '@material-ui/icons/Favorite';
-// import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-// import MoreVertIcon from '@material-ui/icons/MoreVert';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Media from 'react-media'
+/////////////  DEPENDENCIES END /////////////
+
+/////////////  STYLING BEGINS /////////////
 
 const useStyles = makeStyles((theme) => ({
+
+   /////////////// SMALL SCREEN BEGIN /////////////
   rootSmall: {
     maxWidth: 500,
     marginLeft: 50,
     marginTop: 50,
     marginBottom: 50
   },
+  /////////////// MEDIUM SCREEN BEGIN /////////////
   rootMedium: {
     maxWidth: 500,
     marginLeft: 50,
     marginTop: 50,
     marginBottom: 50
   },
+  /////////////// LARGE SCREEN BEGIN /////////////
   rootLarge: {
     maxWidth: 500,
     marginLeft: 50,
     marginTop: 50,
     marginBottom: 50
   },
+  /////////////// RESPONSIVE /////////////
   media: {
     height: 0,
     paddingTop: '56.25%',
@@ -45,21 +51,21 @@ const useStyles = makeStyles((theme) => ({
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
+      duration: theme.transitions.duration.shortest
+    })
   },
   expandOpen: {
     transform: 'rotate(180deg)',
   },
   avatar: {
     backgroundColor: grey[500],
-  },
-}));
+  }
+}))
+/////////////  STYLING ENDS /////////////
 
-
-function Blog() {
+function Blog () {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = React.useState(false)
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -67,23 +73,22 @@ function Blog() {
   return (
     <>
       <Media queries={{
-        small: "(max-width: 599px)",
-        medium: "(min-width: 600px) and (max-width: 1199px)",
-        large: "(min-width: 1200px)"
+        small: '(max-width: 599px)',
+        medium: '(min-width: 600px) and (max-width: 1199px)',
+        large: '(min-width: 1200px)'
       }}>
         {matches => (
-          <React.Fragment>
+          <div>
             {matches.small &&
               <Card className={classes.rootSmall}>
                 <CardHeader
                   avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
+                    <Avatar aria-label='recipe' className={classes.avatar}>
                       Hi!
-        </Avatar>
+                  </Avatar>
                   }
-
-                  title="Today is the beginning"
-                  subheader="November 15th, 2020"
+                  title='Today is the beginning'
+                  subheader="November 15th, 2020'
                 />
                 <CardMedia
                   className={classes.media}
@@ -215,7 +220,7 @@ function Blog() {
                 </CardContent>
               </Collapse>
             </Card>}
-          </React.Fragment>
+          </div>
         )}
       </Media>
       <Card className={classes.root}>
