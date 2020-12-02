@@ -1,23 +1,13 @@
-// import './App.css';
+
+/////////////  DEPENDENCIES BEGIN /////////////
 import Header from './components/header/header'
-import Body from './components/body/body'
 import Footer from './components/footer/footer'
-// import Form from './components/form/form'
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
-// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
-// import { Router } from 'react-router'
-// import {
-// CSSTransition,
-// TransitionGroup
-// } from 'react-transition-group'
-
-
-
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import Blog from './components/blog/blog'
 import About from './components/about/about'
 import Form from './components/form/form'
-// import Home from './components/home/home'
 import Portfolio from './components/portfolio/portfolio'
+/////////////  DEPENDENCIES END /////////////
 
 
 

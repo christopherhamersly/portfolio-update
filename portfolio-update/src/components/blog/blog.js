@@ -68,7 +68,7 @@ function Blog () {
   const [expanded, setExpanded] = React.useState(false)
 
   const handleExpandClick = () => {
-    setExpanded(!expanded);
+    setExpanded(!expanded)
   };
   return (
     <>
@@ -85,16 +85,15 @@ function Blog () {
                   avatar={
                     <Avatar aria-label='recipe' className={classes.avatar}>
                       Hi!
-                  </Avatar>
+                    </Avatar>
                   }
                   title='Today is the beginning'
                   subheader="November 15th, 2020'
                 />
                 <CardMedia
                   className={classes.media}
-                  image="https://i.ibb.co/mRLqtd7/IMG-2481.jpg"
-                  title="Alki Beach"
-                />
+                  image='https://i.ibb.co/mRLqtd7/IMG-2481.jpg'
+                  title='Alki Beach'/>
                 <CardContent>
                   <Typography variant="body2" color="textSecondary" component="p">
                     While decompressing from a seemingly long, but relatively short bootcamp experience, I decided to take on this portfolio.  This was built using React and served as a bit of practice, and to serve as a marker.  This is currently where I am on my journey.  I'm sure in a couple of years, I will look back at this portfolio fondly, and have a memory of it, much like other accomplishments I've made in my professional career.  To mark this occasion, here is a list of 'firsts' that I remember from my previous career.  Here is to making many more firsts as I grow in this career
