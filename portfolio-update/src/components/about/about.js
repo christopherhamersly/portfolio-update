@@ -1,10 +1,10 @@
 import React from 'react';
-import { makeStyles, Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import { Image } from "@chakra-ui/core";
+// import { Image } from "@chakra-ui/core";
 import ImageContentHover from 'react-image-hover';
-import HoverImage from "react-hover-image";
-import InfoIcon from '@material-ui/icons/Info';
+// import HoverImage from "react-hover-image";
+// import InfoIcon from '@material-ui/icons/Info';
 import Media from 'react-media';
 
 
@@ -144,7 +144,7 @@ function About() {
             <React.Fragment>
               {matches.small && 
               <div>
-     <ImageContentHover 
+     {/* <ImageContentHover 
           className={classes.imageSmall}
           tileWidth="460px"
           tileHeight="460px" 
@@ -155,7 +155,7 @@ function About() {
             body: '',
           }} 
           
-          effect="fadeIn" />
+          effect="fadeIn" /> */}
      
       <Typography variant='h3' className = {classes.iAmSmall}> I am....</Typography>
       <Typography variant='h5' className = {classes.iAmAnswerSmall}>  a Software developer based in Seattle, Washington</Typography>

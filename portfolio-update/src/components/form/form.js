@@ -140,10 +140,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'helvetica'
   },
   textSmall: {
-    fontSize: 5,
+    fontSize: 20,
     fontFamily: 'helvetica',
-    marginRight: 30,
-    marginLeft: 100
+    marginRight: 10,
+    marginLeft: 10
   },
   messageTextSmall: {
     fontSize: 20,
@@ -151,13 +151,15 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 30,
     marginLeft: 100,
     marginBottom: 300,
+    marginTop: 30
     // textAlign: 'center'
   },
   contactNameInputSmall: {
-    width: 700,
-    height: 30,
-    marginLeft: 130,
-    marginBottom: 40,
+    width: 200,
+    height: 20,
+    marginLeft: 30,
+    marginBottom: 30,
+    marginTop: 20,
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
@@ -165,34 +167,34 @@ const useStyles = makeStyles((theme) => ({
     // padding: theme.spacing(6),
   },
   contactEmailInputSmall: {
-    width: 700,
-    height: 30,
-    marginLeft: 55,
-    marginBottom: 40,
+    width: 200,
+    height: 20,
+    marginLeft: 30,
+    marginBottom: 30,
+    marginTop: 20,
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   contactSubjectInputSmall: {
-    width: 700,
-    height: 30,
-    marginLeft: 115,
-    marginBottom: 40,
+    width: 200,
+    height: 18,
+    marginLeft: 30,
+    marginBottom: 30,
+    marginTop: 20,
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   contactMessageInputSmall: {
-    width: 700,
-    height: 400,
-    marginLeft: 325,
-    marginBottom: 40,
+    width: 200,
+    height: 18,
+    marginLeft: 30,
+    marginBottom: 30,
+    marginTop: 20,
     padding: 10,
     fontSize: 20,
     fontFamily: 'helvetica'
-    // padding: theme.spacing(6),
   },
   sendButtonSmall: {
     width: 725,
